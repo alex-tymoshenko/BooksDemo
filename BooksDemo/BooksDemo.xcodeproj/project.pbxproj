@@ -11,6 +11,10 @@
 		FA4C31902AF927AA00065FED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C318F2AF927AA00065FED /* SceneDelegate.swift */; };
 		FA4C31922AF927AA00065FED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C31912AF927AA00065FED /* ViewController.swift */; };
 		FA4C31972AF927AD00065FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4C31962AF927AD00065FED /* Assets.xcassets */; };
+		FA4C31B62AF92D1000065FED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA4C31B52AF92D1000065FED /* GoogleService-Info.plist */; };
+		FA4C31B92AF92DD300065FED /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FA4C31B82AF92DD300065FED /* FirebaseCrashlytics */; };
+		FA4C31BB2AF92DD300065FED /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = FA4C31BA2AF92DD300065FED /* FirebaseRemoteConfig */; };
+		FA4C31BE2AF92EDF00065FED /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA4C31BD2AF92EDF00065FED /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,7 @@
 		FA4C31912AF927AA00065FED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA4C31962AF927AD00065FED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4C319B2AF927AD00065FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4C31B52AF92D1000065FED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4C31BE2AF92EDF00065FED /* SnapKit in Frameworks */,
+				FA4C31B92AF92DD300065FED /* FirebaseCrashlytics in Frameworks */,
+				FA4C31BB2AF92DD300065FED /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,7 @@
 				FA4C31912AF927AA00065FED /* ViewController.swift */,
 				FA4C31962AF927AD00065FED /* Assets.xcassets */,
 				FA4C319B2AF927AD00065FED /* Info.plist */,
+				FA4C31B52AF92D1000065FED /* GoogleService-Info.plist */,
 			);
 			path = BooksDemo;
 			sourceTree = "<group>";
@@ -237,6 +246,11 @@
 			dependencies = (
 			);
 			name = BooksDemo;
+			packageProductDependencies = (
+				FA4C31B82AF92DD300065FED /* FirebaseCrashlytics */,
+				FA4C31BA2AF92DD300065FED /* FirebaseRemoteConfig */,
+				FA4C31BD2AF92EDF00065FED /* SnapKit */,
+			);
 			productName = BooksDemo;
 			productReference = FA4C318A2AF927AA00065FED /* BooksDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -265,6 +279,10 @@
 				Base,
 			);
 			mainGroup = FA4C31812AF927AA00065FED;
+			packageReferences = (
+				FA4C31B72AF92DD300065FED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FA4C31BC2AF92EDF00065FED /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = FA4C318B2AF927AA00065FED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4C31972AF927AD00065FED /* Assets.xcassets in Resources */,
+				FA4C31B62AF92D1000065FED /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +512,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA4C31B72AF92DD300065FED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		FA4C31BC2AF92EDF00065FED /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA4C31B82AF92DD300065FED /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4C31B72AF92DD300065FED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		FA4C31BA2AF92DD300065FED /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4C31B72AF92DD300065FED /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		FA4C31BD2AF92EDF00065FED /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4C31BC2AF92EDF00065FED /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA4C31822AF927AA00065FED /* Project object */;
 }
